@@ -44,3 +44,34 @@ void setup()
   rectMode(CENTER);
   stepX = 10;
   stepY = height/2;
+  
+  
+  stepXR = width - 10;
+  stepYR = height/2;
+
+  stepW = 10;
+  stepH = 100;
+  stepS = 5;
+  
+}
+
+void draw() 
+{
+  
+   myBall.display();
+  
+  image(img,0,0,ScreenWidth,ScreenHeight);
+
+  location.add(velocity);
+
+if ((location.x > width) || (location.x < 0)) 
+{
+    velocity.x = velocity.x * -1;
+    
+  }
+  
+if ((location.y > height) || (location.y < 0))
+{
+    
+    velocity.y = velocity.y * -1;
+}
