@@ -75,3 +75,73 @@ if ((location.y > height) || (location.y < 0))
     
     velocity.y = velocity.y * -1;
 }
+
+
+
+
+
+void drawstep() 
+{
+  
+  rect(stepX, stepY, stepW, stepH);
+
+  rect(stepXR, stepYR, stepW, stepH);
+
+}
+
+void movestep()
+{
+  if ( goUpL )
+  {
+    
+    stepY = stepY - stepS;
+    
+  }
+  if ( goDownL ) 
+  {
+    
+    stepY = stepY + stepS;
+    
+  }
+  if ( goUpR )
+  {
+    
+    stepYR = stepYR - stepS;
+    
+  }
+  if ( goDownR )
+  {
+    
+    stepYR = stepYR + stepS;
+    
+  }
+}
+
+void recordstep()
+{
+  if (stepY - stepH/2 < 0)
+  {
+    
+    stepY = stepY + stepS;
+    
+  }
+  if (stepY + stepH/2 > height) 
+  {
+    
+    stepY = stepY - stepS;
+    
+  }
+  if (stepYR - stepH/2 < 0)
+  {
+    
+    stepYR = stepYR + stepS;
+    
+  }
+  if (stepYR + stepH/2 > height)
+  {
+    
+    stepYR = stepYR - stepS;
+    
+  }
+  
+}
