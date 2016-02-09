@@ -13,3 +13,18 @@ class Ball
   speedY = 4;
   
   }
+
+ void display(){
+   
+ // ellipse(200,200,20,20);
+   
+ }
+    
+  }
+  
+void drawcricle() 
+{
+
+  ellipse(X, Y, weight, heigh);
+  
+}
