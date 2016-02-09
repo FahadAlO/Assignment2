@@ -3,6 +3,7 @@ PImage img;
 Ball myBall;
 
 float ScreenWidth,ScreenHeight; 
+
 int X , Y;
 int  weight , heigh;
 int speedX , speedY;
@@ -28,11 +29,18 @@ void setup()
  
    myBall = new Ball(200,200);
  
-  location = new PVector(100,100);
-  velocity = new PVector(2.5,5);
+   location = new PVector(100,100);
+   velocity = new PVector(2.5,5);
   
   X = width/2;
   Y = height/2;
   
   ScreenWidth  = width;
   ScreenHeight = height;
+
+  textSize(30);
+  textAlign(CENTER, CENTER);
+  
+  rectMode(CENTER);
+  stepX = 10;
+  stepY = height/2;
