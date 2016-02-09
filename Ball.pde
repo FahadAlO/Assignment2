@@ -28,3 +28,39 @@ void drawcricle()
   ellipse(X, Y, weight, heigh);
   
 }
+
+void movecricle()
+{
+  
+  X = X + speedX;
+  Y = Y + speedY;
+  
+}
+
+void keyPressed()
+{
+  if (key == 'q' || key == 'Q') 
+  {
+    
+     goUpL = true;
+     
+  }
+  if (key == 'a' || key == 'A')
+  {
+    
+    goDownL = true;
+    
+  }
+  if (keyCode == UP)
+  {
+    
+    goUpR = true;
+    
+  }
+  if (keyCode == DOWN)
+  {
+    
+    goDownR = true;
+    
+  }
+}
