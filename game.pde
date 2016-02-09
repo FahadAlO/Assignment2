@@ -3,6 +3,7 @@ PImage img;
 Ball myBall;
 
 float ScreenWidth,ScreenHeight; 
+
 int X , Y;
 int  weight , heigh;
 int speedX , speedY;
@@ -26,10 +27,10 @@ void setup()
  
    img = loadImage("background.jpg");
  
-   myBall = new Ball(200,200);
+   myBall = new Ball();
  
-  location = new PVector(100,100);
-  velocity = new PVector(2.5,5);
+  location = new PVector(50,50);
+  velocity = new PVector(5.10,10);
   
   X = width/2;
   Y = height/2;
