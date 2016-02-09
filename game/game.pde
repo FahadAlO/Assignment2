@@ -1,8 +1,11 @@
 PImage img;
 
-float ScreenWidth,ScreenHeight; 
+Ball myBall;
 
-int X , Y , weight , heigh , speedX , speedY;
+float ScreenWidth,ScreenHeight; 
+int X , Y;
+int  weight , heigh;
+int speedX , speedY;
 int stepX , stepY;
 int stepW , stepH , stepS;
 int stepXR, stepYR;
@@ -14,14 +17,17 @@ int endScore = 5;
 PVector location;
 PVector velocity;
 
-boolean goUpLeft, goDownLeft;
-boolean goUpRight, goDownRight;
+boolean goUpL, goDownL;
+boolean goUpR, goDownR;
 
-oid setup() 
+void setup() 
 {
- size(500, 500);
- img = loadImage("background.jpg");
-
+   size(500, 500);
+ 
+   img = loadImage("background.jpg");
+ 
+   myBall = new Ball(200,200);
+ 
   location = new PVector(100,100);
   velocity = new PVector(2.5,5);
   
@@ -30,9 +36,3 @@ oid setup()
   
   ScreenWidth  = width;
   ScreenHeight = height;
-  
-  weight = 50;
-  heigh  = 50;
-  
-  speedX = 4;
-  speedY = 4;
