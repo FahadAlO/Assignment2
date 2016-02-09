@@ -16,3 +16,23 @@ PVector velocity;
 
 boolean goUpLeft, goDownLeft;
 boolean goUpRight, goDownRight;
+
+oid setup() 
+{
+ size(500, 500);
+ img = loadImage("background.jpg");
+
+  location = new PVector(100,100);
+  velocity = new PVector(2.5,5);
+  
+  X = width/2;
+  Y = height/2;
+  
+  ScreenWidth  = width;
+  ScreenHeight = height;
+  
+  weight = 50;
+  heigh  = 50;
+  
+  speedX = 4;
+  speedY = 4;
