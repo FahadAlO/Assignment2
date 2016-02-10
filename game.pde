@@ -145,3 +145,27 @@ void recordstep()
   }
   
 }
+
+void contactstep()
+{
+  
+  if (X - weight/2 < stepX + stepW/2 && Y - heigh/2 < stepY + stepH/2 && Y + heigh/2 > stepY - stepH/2 )
+  {
+    if (speedX < 0)
+    {
+      
+      speedX = -speedX;
+      
+    }
+  }
+  
+  else if (X + weight/2 > stepXR - stepW/2 && Y - heigh/2 < stepYR + stepH/2 && Y + heigh/2 > stepYR - stepH/2 ) 
+  {
+    if (speedX > 0)
+    {
+      
+      speedX = -speedX;
+      
+    }
+  }
+}
