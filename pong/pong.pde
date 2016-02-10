@@ -28,28 +28,28 @@ void setup()
  
    myBall = new Ball(200,200);
  
-  location = new PVector(100,100);
-  velocity = new PVector(2.5,5);
+   location = new PVector(100,100);
+   velocity = new PVector(2.5,5);
   
-  X = width/2;
-  Y = height/2;
+   X = width/2;
+   Y = height/2;
   
-  ScreenWidth  = width;
-  ScreenHeight = height;
+   ScreenWidth  = width;
+   ScreenHeight = height;
  
-  rectMode(CENTER);
-  stepX = 10;
-  stepY = height/2;
+   rectMode(CENTER);
+   stepX = 10;
+   stepY = height/2;
 
-  stepXR = width - 10;
-  stepYR = height/2;
+   stepXR = width - 10;
+   stepYR = height/2;
 
-  stepW = 10;
-  stepH = 100;
-  stepS = 5;
+   stepW = 10;
+   stepH = 100;
+   stepS = 5;
   
-  textSize(20);
-  textAlign(CENTER, CENTER);
+   textSize(20);
+   textAlign(CENTER, CENTER);
   
 }
 
@@ -58,9 +58,9 @@ void draw()
   
    myBall.display();
   
-  image(img,0,0,ScreenWidth,ScreenHeight);
+   image(img,0,0,ScreenWidth,ScreenHeight);
 
-  location.add(velocity);
+   location.add(velocity);
 
 if ((location.x > width) || (location.x < 0)) 
 {
@@ -85,6 +85,7 @@ if ((location.y > height) || (location.y < 0))
   
   scores();
   GameOver();
+  
 }
 
 void drawstep() 
@@ -213,8 +214,8 @@ void scores()
 {
  
   fill(255);
-  text(ScoreLeft, 100, 50);
-  text(ScoreRight, width-100, 50);
+  text(ScoreLeft , 100 , 50);
+  text(ScoreRight , width-100 , 50);
   
 }
 
@@ -241,8 +242,8 @@ void GameOver(String text)
   
  
   setup();
-  text("Click to play again", width/2, height/2 + 20);
-  text(text, width/2, height/3);
+  text("Click to play again", width/2 , height/2 + 20);
+  text(text, width/2 , height/3);
   
   if(mousePressed) 
   {
