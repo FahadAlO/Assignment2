@@ -35,9 +35,6 @@ void setup()
   Y = height/2;
   
   ScreenWidth  = width;
-<<<<<<< HEAD:game/game.pde
-  ScreenHeight = height;
-=======
   ScreenHeight = height;
  
   rectMode(CENTER);
@@ -257,4 +254,3 @@ void GameOver(String text)
     
   }  
 }
->>>>>>> a4ab0b5c4a2db20d7b741c341c78a3ea91f3c905:game.pde

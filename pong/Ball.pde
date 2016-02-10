@@ -13,8 +13,6 @@ class Ball
   speedY = 4;
   
   }
-<<<<<<< HEAD:game/Ball.pde
-=======
 
  void display(){
    
@@ -99,6 +97,3 @@ void keyReleased()
   
   
   
-  
-  
->>>>>>> a4ab0b5c4a2db20d7b741c341c78a3ea91f3c905:Ball.pde
