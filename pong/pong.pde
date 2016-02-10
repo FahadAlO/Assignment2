@@ -26,7 +26,7 @@ void setup()
  
    img = loadImage("background.jpg");
  
-   myBall = new Ball(200,200);
+   myBall = new Ball();
  
    location = new PVector(100,100);
    velocity = new PVector(2.5,5);
