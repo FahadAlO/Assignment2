@@ -5,6 +5,6 @@ In this game, which is pong game i have made the task of the player is to preven
 
 Description:
 
-- Right collision use the mouse volume Up and volum Down to control the right paddle.
+- Right collision use the mouse volume Up and volume Down to control the right paddle.
 
-- left collision use keyboard to goUp "q" and goDown "a" keys to control the paddle.
+- left collision use keyboard to goUp "Q" and goDown "A" keys to control the paddle.
