@@ -3,7 +3,6 @@ PImage img;
 Ball myBall;
 
 float ScreenWidth,ScreenHeight; 
-
 int X , Y;
 int  weight , heigh;
 int speedX , speedY;
@@ -29,28 +28,29 @@ void setup()
  
    myBall = new Ball(200,200);
  
-   location = new PVector(100,100);
-   velocity = new PVector(2.5,5);
+  location = new PVector(100,100);
+  velocity = new PVector(2.5,5);
   
-   X = width/2;
-   Y = height/2;
+  X = width/2;
+  Y = height/2;
   
-   ScreenWidth  = width;
-   ScreenHeight = height;
+  ScreenWidth  = width;
+  ScreenHeight = height;
+ 
+  rectMode(CENTER);
+  stepX = 10;
+  stepY = height/2;
 
-   stepX = 10;
-   stepY = height/2;
-  
-   stepXR = width - 10;
-   stepYR = height/2;
+  stepXR = width - 10;
+  stepYR = height/2;
 
-   stepW = 10;
-   stepH = 100;
-   stepS = 5;
+  stepW = 10;
+  stepH = 100;
+  stepS = 5;
   
-   textSize(20);
-   textAlign(CENTER, CENTER);
-
+  textSize(20);
+  textAlign(CENTER, CENTER);
+  
 }
 
 void draw() 
@@ -58,23 +58,22 @@ void draw()
   
    myBall.display();
   
-   image(img,0,0,ScreenWidth,ScreenHeight);
+  image(img,0,0,ScreenWidth,ScreenHeight);
 
-   location.add(velocity);
+  location.add(velocity);
 
 if ((location.x > width) || (location.x < 0)) 
 {
-
     velocity.x = velocity.x * -1;
     
   }
   
 if ((location.y > height) || (location.y < 0))
 {
-
+    
     velocity.y = velocity.y * -1;
 }
-
+  
   drawcricle();
   movecricle();
   actionOff();
@@ -86,13 +85,14 @@ if ((location.y > height) || (location.y < 0))
   
   scores();
   GameOver();
+}
 
 void drawstep() 
 {
   
-  rect(stepX , stepY , stepW , stepH);
+  rect(stepX, stepY, stepW, stepH);
 
-  rect(stepXR , stepYR , stepW , stepH);
+  rect(stepXR, stepYR, stepW, stepH);
 
 }
 
@@ -239,6 +239,7 @@ void GameOver(String text)
   speedX = 100;
   speedY = 100;
   
+ 
   setup();
   text("Click to play again", width/2, height/2 + 20);
   text(text, width/2, height/3);
