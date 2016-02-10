@@ -3,7 +3,7 @@ class Ball
   int X = 0;
   int Y = 0;
   
-  Ball(float X , float Y)
+  Ball()
   {
     
   weight = 15;
@@ -21,8 +21,6 @@ class Ball
  }
     
   }
-  
-  
   
 void drawcricle() 
 {
