@@ -48,10 +48,9 @@ void setup()
   stepH = 100;
   stepS = 5;
   
-  textSize(30);
+  textSize(20);
   textAlign(CENTER, CENTER);
-  rectMode(CENTER);
-  
+
 }
 
 void draw() 
@@ -167,5 +166,62 @@ void contactstep()
       speedX = -speedX;
       
     }
+  }
+}
+
+void  actionOff()
+{
+  if ( X > width - weight/2)
+  {
+    
+    setup();
+    speedX = - speedX;
+    ScoreLeft = ScoreLeft + 1;
+    
+  } 
+  else if ( X < 0 + weight/2)
+  {
+    
+    setup();
+    ScoreRight = ScoreRight + 1;
+    
+  }
+
+  if ( Y > height - heigh/2) 
+  {
+   
+    speedY = - speedY;
+    
+  } 
+  else if ( Y < 0 + heigh/1) 
+  {
+    
+    speedY = - speedY;
+    
+  }
+}
+
+void scores() 
+{
+ 
+  fill(255);
+  text(ScoreLeft, 100, 50);
+  text(ScoreRight, width-100, 50);
+  
+}
+
+void GameOver() 
+{
+  if(ScoreLeft == endScore) 
+  {
+    
+    GameOver("Left wins.");
+    
+  }
+  if(ScoreRight == endScore)
+  {
+    
+    GameOver("Right wins."); 
+    
   }
 }
