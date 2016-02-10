@@ -38,10 +38,6 @@ void setup()
   ScreenWidth  = width;
   ScreenHeight = height;
 
-  textSize(30);
-  textAlign(CENTER, CENTER);
-  
-  rectMode(CENTER);
   stepX = 10;
   stepY = height/2;
   
@@ -51,6 +47,10 @@ void setup()
   stepW = 10;
   stepH = 100;
   stepS = 5;
+  
+  textSize(30);
+  textAlign(CENTER, CENTER);
+  rectMode(CENTER);
   
 }
 
