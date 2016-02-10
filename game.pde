@@ -32,24 +32,24 @@ void setup()
    location = new PVector(100,100);
    velocity = new PVector(2.5,5);
   
-  X = width/2;
-  Y = height/2;
+   X = width/2;
+   Y = height/2;
   
-  ScreenWidth  = width;
-  ScreenHeight = height;
+   ScreenWidth  = width;
+   ScreenHeight = height;
 
-  stepX = 10;
-  stepY = height/2;
+   stepX = 10;
+   stepY = height/2;
   
-  stepXR = width - 10;
-  stepYR = height/2;
+   stepXR = width - 10;
+   stepYR = height/2;
 
-  stepW = 10;
-  stepH = 100;
-  stepS = 5;
+   stepW = 10;
+   stepH = 100;
+   stepS = 5;
   
-  textSize(20);
-  textAlign(CENTER, CENTER);
+   textSize(20);
+   textAlign(CENTER, CENTER);
 
 }
 
@@ -75,9 +75,17 @@ if ((location.y > height) || (location.y < 0))
     velocity.y = velocity.y * -1;
 }
 
+  drawcricle();
+  movecricle();
+  actionOff();
 
-
-
+  drawstep();
+  movestep();
+  recordstep();
+  contactstep();
+  
+  scores();
+  GameOver();
 
 void drawstep() 
 {
@@ -224,4 +232,24 @@ void GameOver()
     GameOver("Right wins."); 
     
   }
+}
+
+void GameOver(String text) 
+{
+  speedX = 100;
+  speedY = 100;
+  
+  setup();
+  text("Click to play again", width/2, height/2 + 20);
+  text(text, width/2, height/3);
+  
+  if(mousePressed) 
+  {
+    setup();
+    ScoreRight = 0;
+    ScoreLeft = 0;
+    speedX = 4;
+    speedY = 4;
+    
+  }  
 }
