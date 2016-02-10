@@ -64,3 +64,34 @@ void keyPressed()
     
   }
 }
+
+void keyReleased()
+{
+  if (key == 'q' || key == 'Q')
+  {
+    
+    goUpL = false;
+    
+  }
+  if (key == 'a' || key == 'A')
+  {
+    
+    goDownL = false;
+    
+  }
+  if (keyCode == UP)
+  {
+    
+    goUpR = false;
+    
+  }
+  if (keyCode == DOWN)
+  {
+    
+    goDownR = false; 
+    
+  }
+}
+  
+  
+  
