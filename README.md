@@ -7,4 +7,4 @@ Description:
 
 - Right collision use the mouse volume Up and volume Down to control the right paddle.
 
-- left collision use keyboard to goUp "Q" and goDown "A" keys to control the paddle.
+- Left collision use keyboard to goUp "Q" and goDown "A" keys to control the left paddle.
